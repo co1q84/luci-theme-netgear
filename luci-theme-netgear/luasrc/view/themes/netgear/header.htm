@@ -146,21 +146,9 @@
 <body class="lang_<%=luci.i18n.context.lang%> <%- if node then %><%= striptags( node.title ) %><%- end %> <% if luci.dispatcher.context.authsession then %>logged-in<% end %>">
 
 <header>
-
-
-
 	<div class="container">
-
-
-   
-        
-        
-
-
-
-<span class="showSide"></span>
-		<img  src="/luci-static/netgear/nlogo.png" <%=striptags( (boardinfo.hostname or "?") ) %>>
-
+		<span class="showSide"></span>
+		<a class="brand" href="#"><%=boardinfo.hostname or "?"%></a>
 		<div class="pull-right">
 		<%
 		-- calculate the number of unsaved changes
